@@ -168,6 +168,12 @@ img {
 
         max-width: 40.4375em;
     }
+
+    .one {
+        background-image: url('images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: 75% 0%;
+    }
 }
 
 @media screen and (min-width: 75em) {
@@ -181,6 +187,9 @@ img {
 
     .one {
         width: 33.75em;
+        background-image: url('images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: 75% 0%;
     }
 
     .two {
