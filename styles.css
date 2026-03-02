@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    --black: #121212;
+    --dark-blue: #19202D;
+    --white: #FFFFFF;
+    --grey-100: #E7EAEE;
+    --grey-200: #CFCFCF;
+    --grey-400: #676D7E;
+    --grey-500: #48556A;
+    --purple-50: #EDE4FF;
+    --purple-300: #A775F1;
+    --purple-500: #733FC8;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: 2em;
+    gap: 2em;
+    max-width: 305px;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+header {
+    display: flex;
+    gap: 1em;
+}
+
+img {
+    max-width: 1.75em;
+    max-height: 1.75em;
+    border-radius: 50%;
+    border: 2px solid var(--purple-300);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+    background-color: var(--grey-200);
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 4px rgba(131, 166, 210, 0.5);
+}
+
+.card-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+.card-summary {
+    line-height: 1.2;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.card-user {
+    line-height: 1.1;
+    font-size: 0.8125em;
+    font-weight: 500;
+    
+}
+
+.card-quote {
+    line-height: 1.4;
+    font-size: 0.8125em;
+    font-weight: 500;
+}
+
+.card-role {
+    line-height: 1.1;
+    font-size: 0.6875em;
+    font-weight: 500;
+}
+
+.purple-theme {
+    background-color: var(--purple-500);
+    color: var(--white);
+
+    .card-quote,
+    .card-role {
+        color: var(--purple-50);
+    }
+}
+
+.grey-theme {
+    background-color: var(--grey-500);
+    color: var(--white);
+
+    .card-role {
+        color: var(--grey-400);
+    }
+
+    .card-quote {
+        color: var(--grey-100);
+    }
+}
+
+.white-theme {
+    background-color: var(--white);
+    color: var(--grey-500);
+
+    .card-role,
+    .card-quote {
+        color: var(--grey-400);
+    }
+}
+
+.blue-theme {
+    background-color: var(--dark-blue);
+    color: var(--white);
+
+    .card-summary {
+        color: var(--grey-200);
+    }
+
+    .card-quote {
+        color: var(--grey-100);
+    }
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+@media screen and (min-width: 48em) and (max-width: 75em) {
+    .card-container {
+        grid-template-areas: 
+        'one one'
+        'two three'
+        'four four'
+        'five five';
+
+        max-width: 40.4375em;
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .card-container {
+        grid-template-areas: 
+        'one one two five'
+        'three four four five';
+        
+        max-width: 69.625em;
+    }
+
+    .one {
+        width: 33.75em;
+    }
+
+    .two {
+        width: 15.9375em;
+    }
+
+    .three {
+        width: 15.9375em;
+    }
+
+    .four {
+        width: 33.75em;
+    }
+
+    .five {
+        width: 15.9375em;
+    }
+}
